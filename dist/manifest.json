@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Tab switcher",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "permissions": [
+    "background",
+    "tabs",
+    "windows"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content-script-loader.userscript.js.11629231.7ba813ec.js"
+      ],
+      "matches": [
+        "https://defly.io/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://defly.io/*"
+      ],
+      "resources": [
+        "assets/userscript.js.11629231.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
